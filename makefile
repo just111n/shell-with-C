@@ -35,10 +35,10 @@ target_checkdaemon: ./bin/source/check_daemon.c
 	$(CC) ./bin/source/check_daemon.c -o ./bin/checkdaemon 
 
 target_main: ./bin/source/shell.c
-	$(CC) ./bin/source/shell.c -o cseshell
+	$(CC) ./bin/source/shell.c -o cshell
 
 clean:
-	$(REMOVE) ./bin/find ./bin/display ./bin/listdirall ./bin/listdir ./bin/countline ./bin/summond ./bin/checkdaemon cseshell
+	$(REMOVE) ./bin/find ./bin/display ./bin/listdirall ./bin/listdir ./bin/countline ./bin/summond ./bin/checkdaemon CShell
 
 
 

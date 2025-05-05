@@ -57,7 +57,7 @@ int shell_cd(char **args)
 {
   if (args[1] == NULL)
   {
-    fprintf(stderr, "CSEShell: expected argument to \"cd\"\n");
+    fprintf(stderr, "CShell: expected argument to \"cd\"\n");
   }
   else
   {
@@ -65,7 +65,7 @@ int shell_cd(char **args)
     // to the directory specified in path.
     if (chdir(args[1]) != 0)
     { // use chdir
-      perror("CSEShell:");
+      perror("CShell:");
     }
   }
 
@@ -124,7 +124,7 @@ int shell_usage(char **args)
 int shell_help(char **args)
 {
   int i;
-  printf("CSEShell Interface\n");
+  printf("CShell Interface\n");
   printf("Usage: command arguments\n");
   printf("The following commands are implemented within the shell:\n");
 
@@ -313,7 +313,7 @@ void main_loop(void)
     timeString[strlen(timeString) - 1] = '\0';
     printf(" %s", timeString);
     red();
-    printf(" CSEShell\n↳ ");
+    printf(" CShell\n↳ ");
     reset();
     fflush(stdout); // clear the buffer and move the output to the console using fflush
 
@@ -330,7 +330,7 @@ void main_loop(void)
 int main(int argc, char **argv)
 {
 
-  printf("CSEShell Run successful. Running now: \n");
+  printf("CShell Run successful. Running now: \n");
 
   // Setup path
   if (getcwd(output_file_path, sizeof(output_file_path)) != NULL)
